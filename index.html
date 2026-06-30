@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 98 Desktop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Desktop Container -->
+    <div id="desktop">
+        <!-- Desktop Icons Container -->
+        <div id="icons-container"></div>
+
+        <!-- Taskbar -->
+        <div id="taskbar">
+            <div id="start-button">
+                <span>Start</span>
+            </div>
+            <div id="taskbar-items"></div>
+            <div id="system-tray">
+                <div id="clock">00:00</div>
+            </div>
+        </div>
+
+        <!-- Context Menu -->
+        <div id="context-menu" class="context-menu hidden">
+            <div class="context-item" data-action="refresh">
+                <span>Refresh</span>
+                <span class="shortcut">F5</span>
+            </div>
+            <div class="context-separator"></div>
+            <div class="context-item" data-action="paste">
+                <span>Paste</span>
+                <span class="shortcut">Ctrl+V</span>
+            </div>
+            <div class="context-separator"></div>
+            <div class="context-item" data-action="new-folder">
+                <span>New &gt;</span>
+            </div>
+            <div class="context-separator"></div>
+            <div class="context-item" data-action="properties">
+                <span>Properties</span>
+                <span class="shortcut">Alt+Enter</span>
+            </div>
+        </div>
+
+        <!-- Icon Context Menu -->
+        <div id="icon-context-menu" class="context-menu hidden">
+            <div class="context-item" data-action="open">
+                <span>Open</span>
+            </div>
+            <div class="context-item" data-action="open-new-window">
+                <span>Open in New Window</span>
+            </div>
+            <div class="context-separator"></div>
+            <div class="context-item" data-action="cut">
+                <span>Cut</span>
+                <span class="shortcut">Ctrl+X</span>
+            </div>
+            <div class="context-item" data-action="copy">
+                <span>Copy</span>
+                <span class="shortcut">Ctrl+C</span>
+            </div>
+            <div class="context-item" data-action="copy-path">
+                <span>Copy Path</span>
+            </div>
+            <div class="context-separator"></div>
+            <div class="context-item" data-action="delete">
+                <span>Delete</span>
+                <span class="shortcut">Del</span>
+            </div>
+            <div class="context-item" data-action="rename">
+                <span>Rename</span>
+                <span class="shortcut">F2</span>
+            </div>
+            <div class="context-separator"></div>
+            <div class="context-item" data-action="properties">
+                <span>Properties</span>
+                <span class="shortcut">Alt+Enter</span>
+            </div>
+        </div>
+
+        <!-- Properties Window -->
+        <div id="properties-window" class="window hidden">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <span id="properties-title">Properties</span>
+                </div>
+                <div class="title-bar-controls">
+                    <button class="title-bar-button" id="properties-close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div id="properties-content"></div>
+            </div>
+        </div>
+
+        <!-- File Explorer Window -->
+        <div id="explorer-window" class="window hidden">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <span id="explorer-title">Folder</span>
+                </div>
+                <div class="title-bar-controls">
+                    <button class="title-bar-button" id="explorer-minimize">_</button>
+                    <button class="title-bar-button" id="explorer-maximize">□</button>
+                    <button class="title-bar-button" id="explorer-close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div id="explorer-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="links-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
